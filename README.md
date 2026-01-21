@@ -43,22 +43,22 @@ A minimalist and professional portfolio website built with modern web technologi
 
 This is a static website that can be deployed anywhere:
 
-#### Option 1: GitHub Pages
+##### Option 1: GitHub Pages
 1. Fork this repository  
 2. Go to repository Settings → Pages  
 3. Select branch and save
 
-#### Option 2: Netlify/Vercel
+##### Option 2: Netlify/Vercel
 - Drag and drop the folder or connect your Git repository  
 - No build process needed
 
-#### Option 3: Traditional Hosting
+##### Option 3: Traditional Hosting
 - Upload all files to any web server  
 - Ensure proper MIME types
 
 ### Configuration
 
-#### Customization Points:
+##### Customization Points:
 
 1. **Profile Information** - Update in HTML meta tags and profile section  
 2. **Social Links** - Modify URLs in the social links section  
@@ -66,7 +66,7 @@ This is a static website that can be deployed anywhere:
 4. **Colors & Themes** - Modify Tailwind config in `<script>` tag  
 5. **Analytics** - Replace Google Analytics tracking ID
 
-#### API Integrations:
+##### API Integrations:
 
 - **GitHub API**: Fetches user stats and repository information  
 - **Spotify API**: Embeds playlist player  
