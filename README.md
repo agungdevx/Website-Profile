@@ -2,7 +2,7 @@
 
 A minimalist and professional portfolio website built with modern web technologies. Features a clean, responsive design with dark/light mode support.
 
-#ß# Features
+### Features
 
 - **Minimalist Design**: Clean interface with outlined card components  
 - **Dark/Light Mode**: Automatic theme detection with manual override  
