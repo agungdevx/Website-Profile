@@ -5,11 +5,17 @@ A minimalist and professional portfolio website built with modern web technologi
 Features
 
 · Minimalist Design: Clean interface with outlined card components
+
 · Dark/Light Mode: Automatic theme detection with manual override
+
 · Responsive Layout: Fully responsive across all device sizes
+
 · GitHub Integration: Real-time GitHub stats via API
+
 · Interactive Elements: Smooth animations and hover effects
+
 · Guestbook: Integrated chat/guestbook functionality
+
 · Spotify Integration: Embedded music playlist player
 
 Technologies Used
