@@ -56,7 +56,7 @@ This is a static website that can be deployed anywhere:
 - Upload all files to any web server  
 - Ensure proper MIME types
 
-#### Configuration
+### Configuration
 
 #### Customization Points:
 
