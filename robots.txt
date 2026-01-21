@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://profile.agungtech.web.id/sitemap.xml
+Sitemap: https://profile.agungdevx.my.id/sitemap.xml
