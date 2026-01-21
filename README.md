@@ -1,76 +1,86 @@
-AgungDevX Profile
+AgungDevX Profile Website
 
-Minimalist black & white portfolio website with NextJS-inspired design.
+Minimalist portfolio website built with HTML, Tailwind CSS & JavaScript.
 
-🎨 Design Features
+🌐 Live Demo
 
-· Minimalist Aesthetic: Clean black & white color scheme
-· Outline Style: SVG icons with stroke-only design
-· Responsive Layout: Fully responsive across all devices
-· Modern Animations: Subtle fade-in and hover effects
-· Dark/Light Mode: Automatic theme detection
+profile.agungdevx.my.id
 
-📁 File Structure
+✨ Features
 
-```
-/
-├── index.html              # Main HTML file
-├── robots.txt             # SEO configuration
-└── sitemap.xml            # Sitemap for search engines
-```
+· Modern Minimalist Design - Clean, elegant interface with outline-style cards
+· Dark/Light Mode - Automatic theme detection with manual toggle option
+· Responsive Layout - Fully responsive across all devices
+· GitHub Integration - Real-time stats via GitHub API
+· Spotify Embed - Current playlist display
+· Guestbook System - Interactive visitor messages
+· Performance Optimized - Fast loading with preconnect hints
+· SEO Optimized - Rich metadata and structured data
 
-🚀 Quick Deployment
-
-1. Upload Files:
-   · Upload index.html to your web server root
-   · Add robots.txt and sitemap.xml for SEO
-2. Customize:
-   · Update personal links in the HTML
-   · Replace profile image URL
-   · Modify meta tags for SEO
-3. Verify:
-   · Check all links work correctly
-   · Test responsive design on mobile
-   · Validate SEO meta tags
-
-🔧 Technologies Used
+🛠️ Tech Stack
 
 · HTML5 - Semantic markup
 · Tailwind CSS - Utility-first styling
-· JavaScript - Interactive elements
-· SVG Icons - Outline-style vector graphics
-· JSON-LD - Structured data for SEO
+· Vanilla JavaScript - No framework dependencies
+· GitHub API - Dynamic profile data
+· Spotify Embed API - Music integration
 
-📱 Sections Included
+📁 Project Structure
 
-1. Profile Header - Name, photo, verification badge
-2. Skills - Coder, Game, Music tags
-3. Social Links - Instagram, GitHub, Telegram, Spotify
-4. Quick Links - Portfolio, TechBOT, API Docs
-5. Music Status - Spotify integration
-6. Guestbook - Interactive message board
+```
+Profile-Website/
+├── index.html          # Main HTML file
+├── README.md           # This file
+└── assets/             # External resources (CDN-based)
+```
 
-🔒 Security Features
+🚀 Quick Start
 
-· Context menu protection
-· Frame-busting script
-· Secure external links (rel="noopener noreferrer")
+1. Clone the repository:
 
-📊 SEO Optimization
+```bash
+git clone https://github.com/agungdevx/Profile-Website.git
+```
 
-· Complete meta tags (Open Graph, Twitter Cards)
-· JSON-LD structured data
-· Semantic HTML elements
-· Accessible design patterns
-· Lazy-loaded iframes
+1. Open index.html in your browser or deploy to any static hosting.
 
-🎯 Browser Support
+⚙️ Customization
 
-· Chrome (latest)
-· Firefox (latest)
-· Safari (latest)
-· Edge (latest)
+· Profile Data: Edit the HTML file directly
+· GitHub Stats: Update username in JavaScript section
+· Social Links: Modify anchor tags in the profile section
+· Colors: Adjust Tailwind config in the <script> tag
+
+📱 Sections
+
+· ✅ Profile with social links
+· ✅ Quick access links
+· ✅ GitHub statistics
+· ✅ Spotify player
+· ✅ Guestbook
+· ✅ Responsive design
+
+🔧 Browser Support
+
+· Chrome 90+
+· Firefox 88+
+· Safari 14+
+· Edge 90+
+
+📝 License
+
+© 2024 AgungDevX. All rights reserved.
+
+🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first.
+
+📞 Contact
+
+· Website: agungdevx.my.id
+· GitHub: @agungdevx
+· Email: contact@agungdevx.my.id
 
 ---
 
-Built with simplicity in mind • © 2024 AgungDevX
+⭐ Star this repo if you find it useful!
