@@ -104,7 +104,7 @@ This is a static website that can be deployed anywhere:
 - GitHub: [@agungdevx](https://github.com/agungdevx)  
 - Email: contact@agungdevx.my.id
 
-- Visitors: ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fagungdevx%2Fprofile-website&countColor=%23263759&style=flat-square)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https://github.com/agungdevx/Website-Profile&countColor=%23263759&style=flat-square)
 ---
 
 Built with simplicity and performance in mind.
