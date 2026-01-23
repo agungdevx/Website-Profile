@@ -1,10 +1,7 @@
 {
   "name": "agungdevx-profile-website",
   "version": "1.0.0",
-  "engines": {
-    "node": ">=18"
-  },
   "scripts": {
-    "build": "npx html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true index.html -o index.html"
+    "build": "npx html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true index.html -o minified.html && mv minified.html index.html"
   }
 }
