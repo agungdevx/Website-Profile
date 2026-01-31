@@ -52,7 +52,7 @@
     <meta name="apple-mobile-web-app-title" content="AgungDevX">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -72,7 +72,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        sans: ['Titillium Web', 'system-ui', '-apple-system', 'sans-serif'],
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.5s ease-out',
@@ -126,6 +126,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: 'Titillium Web', sans-serif;
         }
 
         .outline-card {
@@ -204,11 +205,142 @@
             }
         }
 
-        /* Responsive adjustments */
+        /* Responsive adjustments untuk GitHub Section */
         @media (max-width: 640px) {
             .profile-img {
                 width: 100px;
                 height: 100px;
+            }
+            
+            /* Responsive untuk GitHub Stats */
+            .github-stats-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.5rem !important;
+            }
+            
+            .github-stats-item {
+                padding: 0.75rem !important;
+            }
+            
+            .github-stats-value {
+                font-size: 1rem !important;
+            }
+            
+            .github-stats-label {
+                font-size: 0.7rem !important;
+            }
+            
+            .repo-stats-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 0.5rem !important;
+            }
+            
+            .repo-stats-item {
+                padding: 0.5rem !important;
+            }
+            
+            .repo-stats-value {
+                font-size: 0.875rem !important;
+            }
+            
+            .repo-stats-label {
+                font-size: 0.65rem !important;
+            }
+            
+            /* Perkecil font pada section GitHub */
+            .github-section h2 {
+                font-size: 1.125rem !important;
+            }
+            
+            .github-section h3 {
+                font-size: 0.95rem !important;
+            }
+            
+            .github-section p {
+                font-size: 0.8rem !important;
+            }
+            
+            /* Perbaiki button links */
+            .github-links {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0.5rem !important;
+            }
+            
+            .github-link-btn {
+                padding: 0.5rem !important;
+                font-size: 0.85rem !important;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .github-stats-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 0.75rem !important;
+            }
+            
+            .github-stats-item {
+                padding: 0.875rem !important;
+            }
+            
+            .github-stats-value {
+                font-size: 1.125rem !important;
+            }
+            
+            .github-stats-label {
+                font-size: 0.75rem !important;
+            }
+        }
+
+        /* Penyesuaian untuk smallest width devices */
+        @media (max-width: 320px) {
+            .github-stats-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.375rem !important;
+            }
+            
+            .github-stats-item {
+                padding: 0.5rem 0.375rem !important;
+            }
+            
+            .github-stats-value {
+                font-size: 0.875rem !important;
+            }
+            
+            .github-stats-label {
+                font-size: 0.6rem !important;
+            }
+            
+            .repo-stats-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 0.375rem !important;
+            }
+            
+            .repo-stats-value {
+                font-size: 0.75rem !important;
+            }
+            
+            .repo-stats-label {
+                font-size: 0.55rem !important;
+            }
+        }
+
+        /* Fix untuk overflow horizontal */
+        .github-container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* GitHub Section khusus */
+        .github-section .grid-cols-1.lg\:grid-cols-2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 1024px) {
+            .github-section .grid-cols-1.lg\:grid-cols-2 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -363,7 +495,7 @@
             like WhatsApp bots, REST APIs, and web apps. Currently exploring AI integration 
             and scalable backend systems.
         </p>
-        
+
         <div class="mt-4 flex flex-wrap gap-2">
             <span class="px-3 py-1 text-sm rounded-full outline-btn">Node.js</span>
             <span class="px-3 py-1 text-sm rounded-full outline-btn">JavaScript</span>
@@ -490,50 +622,50 @@
             </section>
 
             <!-- GitHub Stats & Repo Info Section -->
-            <section class="animate-fade-in-up mt-12 mb-8" style="animation-delay: 0.3s">
-                <div class="outline-card rounded-xl p-6">
-                    <div class="flex items-center mb-6">
+            <section class="animate-fade-in-up mt-12 mb-8 github-section" style="animation-delay: 0.3s">
+                <div class="outline-card rounded-xl p-4 md:p-6 github-container">
+                    <div class="flex items-center mb-4 md:mb-6">
                         <svg class="social-icon w-5 h-5 mr-2" viewBox="0 0 24 24">
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
                         <h2 class="text-xl font-semibold">GitHub Profile & Repository</h2>
                     </div>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                         <!-- LEFT COLUMN: User Profile Stats -->
                         <div>
                             <h3 class="font-semibold mb-4 flex items-center">
                                 <img src="https://github.com/agungdevx.png" alt="GitHub Avatar" 
                                      class="w-8 h-8 rounded-full mr-3">
-                                <span id="githubName">@agungdevx</span>
+                                <span id="githubName" class="text-base md:text-lg">@agungdevx</span>
                             </h3>
                             <p id="githubBio" class="text-sm text-gray-600 dark:text-gray-400 mb-4">
                                 Full Stack Developer • WhatsApp Bot Specialist
                             </p>
 
                             <!-- User Stats Grid -->
-                            <div class="grid grid-cols-4 gap-3 mb-6">
-                                <div class="outline-card rounded-lg p-3 text-center">
-                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200" id="repoCount">--</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400">Repos</div>
+                            <div class="grid grid-cols-4 gap-2 md:gap-3 mb-6 github-stats-grid">
+                                <div class="outline-card rounded-lg p-3 text-center github-stats-item">
+                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200 github-stats-value" id="repoCount">--</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 github-stats-label">Repos</div>
                                 </div>
-                                <div class="outline-card rounded-lg p-3 text-center">
-                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200" id="gistCount">--</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400">Gists</div>
+                                <div class="outline-card rounded-lg p-3 text-center github-stats-item">
+                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200 github-stats-value" id="gistCount">--</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 github-stats-label">Gists</div>
                                 </div>
-                                <div class="outline-card rounded-lg p-3 text-center">
-                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200" id="followersCount">--</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400">Followers</div>
+                                <div class="outline-card rounded-lg p-3 text-center github-stats-item">
+                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200 github-stats-value" id="followersCount">--</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 github-stats-label">Followers</div>
                                 </div>
-                                <div class="outline-card rounded-lg p-3 text-center">
-                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200" id="followingCount">--</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400">Following</div>
+                                <div class="outline-card rounded-lg p-3 text-center github-stats-item">
+                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200 github-stats-value" id="followingCount">--</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 github-stats-label">Following</div>
                                 </div>
                             </div>
 
                             <!-- Recent Activity -->
                             <div class="outline-card rounded-lg p-4">
-                                <h3 class="font-semibold mb-3 flex items-center">
+                                <h3 class="font-semibold mb-3 flex items-center text-sm md:text-base">
                                     <svg class="social-icon w-4 h-4 mr-2" viewBox="0 0 24 24">
                                         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                                     </svg>
@@ -555,31 +687,31 @@
                                     <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
                                     <polyline points="22,7 12,13 2,7"></polyline>
                                 </svg>
-                                This Website Repo
+                                <span class="text-base md:text-lg">This Website Repo</span>
                             </h3>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
                                 <span class="font-medium">agungdevx/Website-Profile</span> - Minimalist portfolio website built with HTML, Tailwind CSS & JavaScript.
                             </p>
 
                             <!-- Repo Stats Grid -->
-                            <div class="grid grid-cols-3 gap-3 mb-6">
-                                <div class="outline-card rounded-lg p-3 text-center">
-                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200" id="repoStars">1</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400">Stars</div>
+                            <div class="grid grid-cols-3 gap-2 md:gap-3 mb-6 repo-stats-grid">
+                                <div class="outline-card rounded-lg p-3 text-center repo-stats-item">
+                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200 repo-stats-value" id="repoStars">1</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 repo-stats-label">Stars</div>
                                 </div>
-                                <div class="outline-card rounded-lg p-3 text-center">
-                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200" id="repoForks">0</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400">Forks</div>
+                                <div class="outline-card rounded-lg p-3 text-center repo-stats-item">
+                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200 repo-stats-value" id="repoForks">0</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 repo-stats-label">Forks</div>
                                 </div>
-                                <div class="outline-card rounded-lg p-3 text-center">
-                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200" id="repoWatchers">1</div>
-                                    <div class="text-xs text-gray-600 dark:text-gray-400">Watching</div>
+                                <div class="outline-card rounded-lg p-3 text-center repo-stats-item">
+                                    <div class="text-xl font-bold text-gray-800 dark:text-gray-200 repo-stats-value" id="repoWatchers">1</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400 repo-stats-label">Watching</div>
                                 </div>
                             </div>
 
                             <!-- Repo Details -->
                             <div class="outline-card rounded-lg p-4">
-                                <h3 class="font-semibold mb-3">Repository Details</h3>
+                                <h3 class="font-semibold mb-3 text-sm md:text-base">Repository Details</h3>
                                 <div class="space-y-2 text-sm">
                                     <div class="flex justify-between">
                                         <span class="text-gray-600 dark:text-gray-400">Updated:</span>
@@ -603,16 +735,16 @@
                     </div>
 
                     <!-- Links -->
-                    <div class="grid grid-cols-2 gap-4 mt-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-6 md:mt-8 github-links">
                         <a href="https://github.com/agungdevx" target="_blank" rel="noopener noreferrer"
-                           class="outline-btn py-3 text-center flex items-center justify-center">
+                           class="outline-btn py-3 px-4 text-center flex items-center justify-center github-link-btn">
                             <svg class="social-icon w-5 h-5 mr-2" viewBox="0 0 24 24">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                             View GitHub Profile
                         </a>
                         <a href="https://github.com/agungdevx/Website-Profile" target="_blank" rel="noopener noreferrer"
-                           class="outline-btn py-3 text-center flex items-center justify-center">
+                           class="outline-btn py-3 px-4 text-center flex items-center justify-center github-link-btn">
                             <svg class="social-icon w-5 h-5 mr-2" viewBox="0 0 24 24">
                                 <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
                                 <polyline points="22,7 12,13 2,7"></polyline>
@@ -895,55 +1027,225 @@
         }); // DOMContentLoaded end
     </script>
 
-    <!-- Professional SEO -->
+<!-- Professional SEO - Enhanced for Google Knowledge Graph -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "Person",
-      "@id": "https://agungdevx.my.id/#person",
+      "@id": "https://profile.agungdevx.my.id/#person",
       "name": "Agung Mahesa",
-      "alternateName": ["AgungDevX","agungdevx"],
-      "url": "https://agungdevx.my.id/",
-      "image": "https://files.catbox.moe/dx80a2.jpg",
-      "jobTitle": [
-        "Full Stack Web Developer",
-        "WhatsApp Bot Developer",
-        "AI Prompt Engineering",
-        "API Engineer"
+      "givenName": "Agung",
+      "familyName": "Mahesa",
+      "additionalName": "DevX",
+      "alternateName": [
+        "AgungDevX",
+        "agungdevx",
+        "Agung Mahesa DevX",
+        "Agung Dev X"
       ],
-      "description": "Agung Mahesa, professionally known as AgungDevX, is an independent Full Stack Web Developer and API Engineer from West Java, Indonesia.",
+      "description": "Agung Mahesa, known professionally as AgungDevX, is a skilled Full Stack Web Developer and WhatsApp Bot Specialist from West Java, Indonesia. Expert in API engineering, AI integration, and scalable automation solutions for business productivity.",
+      "url": "https://profile.agungdevx.my.id",
+      "image": [
+        "https://files.catbox.moe/ln3eyr.jpg",
+        "https://files.catbox.moe/dx80a2.jpg"
+      ],
+      "jobTitle": [
+        "Full Stack Developer",
+        "WhatsApp Bot Developer",
+        "API Engineer",
+        "AI Integration Specialist",
+        "Automation Developer"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Independent Developer",
+        "description": "Freelance software development and consulting services"
+      },
+      "knowsAbout": [
+        "Node.js Development",
+        "JavaScript Programming",
+        "API Design & Development",
+        "WhatsApp Business API",
+        "RESTful APIs",
+        "Web Development",
+        "Bot Development",
+        "Automation Scripting",
+        "AI Prompt Engineering",
+        "Backend Systems"
+      ],
+      "knowsLanguage": [
+        "Indonesian",
+        "English"
+      ],
+      "nationality": {
+        "@type": "Country",
+        "name": "Indonesia"
+      },
+      "birthPlace": {
+        "@type": "City",
+        "name": "West Java"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Self-Taught Developer"
+        }
+      ],
       "sameAs": [
         "https://github.com/agungdevx",
-        "https://linkedin.com/in/agungdevx",
         "https://instagram.com/agungdevx",
         "https://t.me/agungdevx",
-        "https://lynk.id/techbot"
+        "https://agungdevx.my.id",
+        "https://lynk.id/techbot",
+        "https://www.linkedin.com/in/agungdevx"
       ],
-      "disambiguatingDescription": "This person is known as AgungDevX and is not related to AgungTex, Agung Hapsah, or Agung Development Propertindo."
+      "mainEntityOfPage": "https://profile.agungdevx.my.id",
+      "brand": "AgungDevX",
+      "disambiguatingDescription": "AgungDevX (Agung Mahesa) is an Indonesian software developer specializing in WhatsApp bot development and API engineering. This entity is distinct from AgungTex, Agung Hapsah, Agung Development Propertindo, or any other similarly named individuals or businesses.",
+      "keywords": "AgungDevX, WhatsApp bot developer, API engineer, full stack developer, Node.js, JavaScript, Indonesia developer, automation specialist",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "technical support",
+        "email": "contact@agungdevx.my.id",
+        "availableLanguage": ["English", "Indonesian"]
+      }
     },
-
-    {
-      "@type": "WebSite",
-      "@id": "https://agungdevx.my.id/#website",
-      "url": "https://agungdevx.my.id/",
-      "name": "AgungDevX Portfolio",
-      "about": { "@id": "https://agungdevx.my.id/#person" },
-      "publisher": { "@id": "https://agungdevx.my.id/#person" }
-    },
-
     {
       "@type": "WebSite",
       "@id": "https://profile.agungdevx.my.id/#website",
-      "url": "https://profile.agungdevx.my.id/",
-      "name": "AgungDevX Professional Profile",
-      "about": { "@id": "https://agungdevx.my.id/#person" },
-      "publisher": { "@id": "https://agungdevx.my.id/#person" },
-      "isPartOf": { "@id": "https://agungdevx.my.id/#website" }
+      "url": "https://profile.agungdevx.my.id",
+      "name": "AgungDevX - Professional Developer Profile",
+      "description": "Official professional profile of AgungDevX - Full Stack Developer & WhatsApp Bot Specialist. Portfolio showcasing projects, skills, and contact information.",
+      "publisher": {
+        "@id": "https://profile.agungdevx.my.id/#person"
+      },
+      "inLanguage": "en-US",
+      "keywords": "developer portfolio, WhatsApp bot, API development, programming, web development, Indonesia tech",
+      "copyrightYear": 2026,
+      "datePublished": "2024-01-01",
+      "dateModified": "2026-01-21",
+      "mainEntity": {
+        "@id": "https://profile.agungdevx.my.id/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://profile.agungdevx.my.id/#webpage",
+      "url": "https://profile.agungdevx.my.id",
+      "name": "AgungDevX Profile | Full Stack Developer & Bot Specialist",
+      "description": "Professional profile of AgungDevX showcasing expertise in WhatsApp bot development, API engineering, and full stack web development. View projects, skills, and contact information.",
+      "isPartOf": {
+        "@id": "https://profile.agungdevx.my.id/#website"
+      },
+      "about": {
+        "@id": "https://profile.agungdevx.my.id/#person"
+      },
+      "mainEntity": {
+        "@id": "https://profile.agungdevx.my.id/#person"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://files.catbox.moe/ln3eyr.jpg",
+        "width": 1200,
+        "height": 630,
+        "caption": "AgungDevX Profile Image"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://profile.agungdevx.my.id"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Developer Profile",
+            "item": "https://profile.agungdevx.my.id/#profile"
+          }
+        ]
+      },
+      "significantLinks": [
+        "https://agungdevx.my.id",
+        "https://github.com/agungdevx",
+        "https://lynk.id/techbot"
+      ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://profile.agungdevx.my.id/#profilepage",
+      "url": "https://profile.agungdevx.my.id",
+      "name": "AgungDevX Developer Profile",
+      "description": "Complete developer profile with skills, projects, GitHub stats, and contact information.",
+      "mainEntity": {
+        "@id": "https://profile.agungdevx.my.id/#person"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".profile-section", ".about-section", ".skills-section"]
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://profile.agungdevx.my.id/#organization",
+      "name": "AgungDevX Development",
+      "description": "Independent software development and technical consulting services by AgungDevX",
+      "url": "https://agungdevx.my.id",
+      "logo": "https://files.catbox.moe/dx80a2.jpg",
+      "foundingDate": "2020",
+      "founder": {
+        "@id": "https://profile.agungdevx.my.id/#person"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "contact@agungdevx.my.id"
+      },
+      "sameAs": [
+        "https://github.com/agungdevx",
+        "https://agungdevx.my.id"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://profile.agungdevx.my.id/#service",
+      "name": "WhatsApp Bot Development",
+      "serviceType": "Software Development",
+      "provider": {
+        "@id": "https://profile.agungdevx.my.id/#person"
+      },
+      "description": "Custom WhatsApp bot development for automation, customer service, and business process optimization.",
+      "areaServed": "Worldwide",
+      "audience": "Businesses, Entrepreneurs, Developers",
+      "offers": {
+        "@type": "Offer",
+        "category": "Software Development Services"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "API Development & Integration",
+      "serviceType": "API Engineering",
+      "provider": {
+        "@id": "https://profile.agungdevx.my.id/#person"
+      },
+      "description": "Custom REST API development, integration services, and backend system architecture."
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://agungdevx.my.id/#blog",
+      "name": "AgungDevX Blog",
+      "description": "Technical blog about web development, API design, WhatsApp bots, and programming tutorials.",
+      "url": "https://agungdevx.my.id",
+      "publisher": {
+        "@id": "https://profile.agungdevx.my.id/#person"
+      },
+      "inLanguage": "en-US"
     }
-
   ]
 }
 </script>
